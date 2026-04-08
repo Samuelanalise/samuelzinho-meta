@@ -414,9 +414,23 @@ function calcFreq(rows){return getAvg(rows,['Frequência','Frequency','Freq']);}
 function cutoff(){const d=new Date();d.setDate(d.getDate()-periodDays);d.setHours(0,0,0,0);return d;}
 function parseDate(s){
   if(!s)return null;
-  const p=s.split(/[-\/]/);if(p.length!==3)return new Date(s);
-  const[a,b,c]=p.map(Number);
-  return a>1000?new Date(a,b-1,c):new Date(c,b-1,a);
+  s=s.trim();
+  // ISO format YYYY-MM-DD
+  if(/^\d{4}-\d{2}-\d{2}/.test(s)){
+    const[y,m,d]=s.split('-').map(Number);
+    return new Date(y,m-1,d);
+  }
+  // Brazilian format DD/MM/YYYY
+  if(/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)){
+    const[d,m,y]=s.split('/').map(Number);
+    return new Date(y,m-1,d);
+  }
+  // DD/MM/YY
+  if(/^\d{1,2}\/\d{1,2}\/\d{2}$/.test(s)){
+    const[d,m,y]=s.split('/').map(Number);
+    return new Date(2000+y,m-1,d);
+  }
+  return new Date(s);
 }
 function ymd(d){return d.toISOString().split('T')[0];}
 function yesterday(){const d=new Date();d.setDate(d.getDate()-1);return ymd(d);}
