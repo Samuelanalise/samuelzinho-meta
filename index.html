@@ -414,23 +414,23 @@ function calcFreq(rows){return getAvg(rows,['Frequência','Frequency','Freq']);}
 function cutoff(){const d=new Date();d.setDate(d.getDate()-periodDays);d.setHours(0,0,0,0);return d;}
 function parseDate(s){
   if(!s)return null;
-  s=s.trim();
-  // ISO format YYYY-MM-DD
-  if(/^\d{4}-\d{2}-\d{2}/.test(s)){
-    const[y,m,d]=s.split('-').map(Number);
-    return new Date(y,m-1,d);
-  }
-  // Brazilian format DD/MM/YYYY
-  if(/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)){
-    const[d,m,y]=s.split('/').map(Number);
-    return new Date(y,m-1,d);
-  }
+  s=String(s).trim();
+  if(!s)return null;
+  // YYYY-MM-DD (ISO)
+  let m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s);
+  if(m)return new Date(+m[1],+m[2]-1,+m[3]);
+  // DD/MM/YYYY (Brazilian)
+  m=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s);
+  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
   // DD/MM/YY
-  if(/^\d{1,2}\/\d{1,2}\/\d{2}$/.test(s)){
-    const[d,m,y]=s.split('/').map(Number);
-    return new Date(2000+y,m-1,d);
-  }
-  return new Date(s);
+  m=/^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(s);
+  if(m)return new Date(2000+(+m[3]),+m[2]-1,+m[1]);
+  // DD-MM-YYYY
+  m=/^(\d{1,2})-(\d{1,2})-(\d{4})$/.exec(s);
+  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
+  // Try native (last resort)
+  const d=new Date(s);
+  return isNaN(d)?null:d;
 }
 function ymd(d){return d.toISOString().split('T')[0];}
 function yesterday(){const d=new Date();d.setDate(d.getDate()-1);return ymd(d);}
@@ -557,6 +557,14 @@ async function loadClientData(clientId){
     const{data:ads}=parseRows(adsRows);
     const{data:crm}=parseRows(crmRows);
     sheetData[clientId]={ads,crm};
+    // Debug: log first few dates to console
+    if(ads.length>0){
+      const dateKey=Object.keys(ads[0]).find(k=>/data/i.test(k))||'Data';
+      console.log(`[${c.name}] ${ads.length} linhas de ads. Datas amostra:`, ads.slice(0,3).map(r=>r[dateKey]));
+      console.log(`[${c.name}] Período: ${periodDays} dias, cutoff:`, cutoff().toLocaleDateString('pt-BR'));
+      const inP=ads.filter(r=>inPeriod(r[dateKey]));
+      console.log(`[${c.name}] Linhas no período:`, inP.length);
+    }
     renderClients();
     if(activeClientId===clientId){renderMetrics(clientId);renderCamps(clientId);}
   }catch(e){showToast(`Erro ${c.name}: ${e.message}`);}
