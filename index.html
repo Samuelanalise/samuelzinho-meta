@@ -4,65 +4,64 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Samuelzinho Meta</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;900&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --n1:#0d1730;--n2:#0a1326;--n3:#060c19;
   --y:#ffcc00;--o:#ea5b0c;--w:#f6f6f6;
   --grad:linear-gradient(90deg,var(--y) 0%,var(--o) 100%);
-  --good:#2ecc71;--warn-c:#ffcc00;--bad:#ea5b0c;
-  --fd:'Fraunces',Georgia,serif;--fb:'Inter',system-ui,sans-serif;--fm:'JetBrains Mono',monospace;
+  --good:#2ecc71;--fd:'Darker Grotesque',sans-serif;--fb:'Montserrat',sans-serif;--fm:'JetBrains Mono',monospace;
 }
 html,body{height:100%;width:100%;overflow:hidden;background:var(--n2);color:var(--w);font-family:var(--fb);}
 body{display:flex;flex-direction:column;}
 header{display:flex;align-items:center;gap:14px;padding:0 22px;height:56px;background:var(--n3);border-bottom:2px solid var(--o);flex-shrink:0;}
-.logo{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--w);}
-.logo em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hbadge{font-family:var(--fm);font-size:9px;padding:3px 8px;border:1px solid rgba(255,255,255,.12);border-radius:4px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+.logo{font-family:var(--fd);font-size:22px;font-weight:900;color:var(--w);letter-spacing:1px;text-transform:uppercase;}
+.logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hbadge{font-family:var(--fd);font-size:9px;font-weight:700;padding:3px 9px;border:1px solid rgba(255,255,255,.12);border-radius:4px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;}
 .hright{margin-left:auto;display:flex;align-items:center;gap:8px;}
-.hconn{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.hconn{font-family:var(--fd);font-size:10px;font-weight:600;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
 .hcdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.15);}
 .hcdot.on{background:var(--good);box-shadow:0 0 0 2px rgba(46,204,113,.2);}
-.hbtn{background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:5px;color:rgba(255,255,255,.5);font-size:10px;padding:5px 11px;cursor:pointer;font-family:var(--fb);font-weight:500;transition:all .2s;}
+.hbtn{background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:5px;color:rgba(255,255,255,.5);font-size:10px;font-weight:700;font-family:var(--fd);padding:5px 11px;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;transition:all .2s;}
 .hbtn:hover{border-color:var(--o);color:var(--o);}
-.scheduler-badge{font-family:var(--fm);font-size:9px;padding:3px 8px;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.3);border-radius:4px;color:var(--good);display:none;}
+.sched-badge{font-family:var(--fd);font-size:9px;font-weight:700;padding:3px 8px;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.3);border-radius:4px;color:var(--good);text-transform:uppercase;letter-spacing:1px;display:none;}
 .main{display:flex;flex:1;overflow:hidden;height:calc(100vh - 56px);}
 .sidebar{width:270px;flex-shrink:0;background:var(--n3);border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;height:100%;}
 .sidebar::-webkit-scrollbar{width:3px;}
 .sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);}
 .sbs{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06);}
-.sbl{font-family:var(--fm);font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:10px;font-weight:500;}
+.sbl{font-family:var(--fd);font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:11px;}
 .f{margin-bottom:9px;}
-.f label{display:block;font-size:12px;color:rgba(255,255,255,.6);margin-bottom:4px;font-weight:500;}
+.f label{display:block;font-family:var(--fd);font-size:11px;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px;letter-spacing:.3px;text-transform:uppercase;}
 .f input,.f select,.f textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:var(--w);font-family:var(--fm);font-size:11px;padding:8px 10px;outline:none;transition:border-color .2s;resize:none;}
 .f input:focus,.f select:focus,.f textarea:focus{border-color:var(--o);}
 .f input::placeholder,.f textarea::placeholder{color:rgba(255,255,255,.25);}
 .f select option{background:var(--n2);}
 .f .hint{font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;line-height:1.4;}
-.f .hint a{color:var(--o);text-decoration:none;}
-.btn{width:100%;padding:10px 12px;border:none;border-radius:6px;font-family:var(--fb);font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;}
-.btn-o{background:var(--grad);color:var(--n3);}
+.f .hint a{color:var(--o);text-decoration:underline;}
+.btn{width:100%;padding:10px 12px;border:none;border-radius:6px;font-family:var(--fd);font-size:13px;font-weight:900;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:1px;}
+.btn-o{background:var(--grad);color:#fff;}
 .btn-o:hover{opacity:.9;}
 .btn-o:disabled{opacity:.35;cursor:default;}
-.btn-g{background:transparent;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.45);margin-top:5px;}
+.btn-g{background:transparent;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.45);margin-top:5px;font-size:11px;}
 .btn-g:hover{border-color:var(--o);color:var(--o);}
 .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
 .mc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:11px 12px;}
-.mc .ml{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4);letter-spacing:.5px;text-transform:uppercase;font-weight:500;}
-.mc .mv{font-size:20px;font-weight:700;margin:5px 0 2px;color:var(--w);letter-spacing:-.5px;}
-.mc .md{font-size:10px;font-weight:600;}
+.mc .ml{font-family:var(--fd);font-size:9px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+.mc .mv{font-family:var(--fd);font-size:22px;font-weight:900;margin:5px 0 2px;color:var(--w);}
+.mc .md{font-family:var(--fd);font-size:10px;font-weight:700;}
 .md.up{color:var(--good);}.md.dn{color:var(--o);}.md.nu{color:rgba(255,255,255,.3);}
 .mql-wrap{margin-top:11px;}
 .mql-bg{height:4px;background:rgba(255,255,255,.1);border-radius:2px;}
 .mql-fill{height:4px;border-radius:2px;transition:width .4s;}
 .mql-labels{display:flex;justify-content:space-between;margin-top:4px;}
-.mql-labels span{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4);}
+.mql-labels span{font-family:var(--fd);font-size:9px;font-weight:600;color:rgba(255,255,255,.4);}
 .ci{padding:10px 11px;border-radius:7px;border:1px solid transparent;cursor:pointer;transition:all .15s;margin-bottom:3px;}
 .ci:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);}
 .ci.active{background:rgba(234,91,12,.12);border-color:rgba(234,91,12,.4);}
-.ci-name{font-size:13px;font-weight:600;color:var(--w);display:flex;align-items:center;gap:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.ci-meta{font-size:10px;color:rgba(255,255,255,.4);margin-top:3px;font-family:var(--fm);}
+.ci-name{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);display:flex;align-items:center;gap:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ci-meta{font-family:var(--fd);font-size:10px;font-weight:500;color:rgba(255,255,255,.4);margin-top:3px;}
 .sdot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0;}
 .s-on{background:var(--good);}.s-w{background:var(--y);}.s-off{background:rgba(255,255,255,.2);}
 .ci-edit{background:transparent;border:none;color:rgba(255,255,255,.25);font-size:12px;cursor:pointer;padding:0;margin-left:auto;flex-shrink:0;opacity:0;transition:opacity .2s;}
@@ -71,40 +70,40 @@ header{display:flex;align-items:center;gap:14px;padding:0 22px;height:56px;backg
 .cmp{padding:8px 10px;border-radius:6px;border:1px solid transparent;cursor:pointer;transition:all .12s;margin-bottom:2px;}
 .cmp:hover,.cmp.active{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);}
 .cmp.active{border-color:var(--o);}
-.cmp-label{font-size:11px;font-weight:500;color:var(--w);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.cmp-meta{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4);margin-top:2px;display:flex;gap:6px;}
-.cpill{font-family:var(--fm);font-size:8px;padding:2px 6px;border-radius:3px;font-weight:700;}
+.cmp-label{font-family:var(--fd);font-size:12px;font-weight:700;color:var(--w);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cmp-meta{font-family:var(--fd);font-size:9px;font-weight:500;color:rgba(255,255,255,.4);margin-top:2px;display:flex;gap:6px;}
+.cpill{font-family:var(--fd);font-size:8px;font-weight:900;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;}
 .cp-g{background:rgba(46,204,113,.15);color:var(--good);}
 .cp-w{background:rgba(255,204,0,.15);color:var(--y);}
 .cp-b{background:rgba(234,91,12,.15);color:var(--o);}
 .qalist{display:flex;flex-direction:column;gap:4px;}
-.qabtn,.rpbtn{background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:6px;color:rgba(255,255,255,.55);font-size:11px;font-family:var(--fb);font-weight:500;padding:8px 10px;text-align:left;cursor:pointer;transition:all .18s;width:100%;margin-bottom:3px;}
+.qabtn,.rpbtn{background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:6px;color:rgba(255,255,255,.55);font-size:11px;font-family:var(--fd);font-weight:600;padding:8px 10px;text-align:left;cursor:pointer;transition:all .18s;width:100%;margin-bottom:3px;}
 .qabtn:hover,.rpbtn:hover{border-color:var(--o);color:var(--w);background:rgba(234,91,12,.08);}
 .chat-area{flex:1;display:flex;flex-direction:column;height:100%;overflow:hidden;min-width:0;background:var(--n2);}
 .chat-hdr{padding:12px 24px;border-bottom:1px solid rgba(255,255,255,.07);background:var(--n1);display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.chat-name{font-family:var(--fd);font-size:19px;font-weight:400;font-style:italic;color:var(--w);}
-.chat-kpis{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4);display:flex;gap:18px;margin-left:auto;}
-.chat-kpi .kv{font-size:16px;font-weight:700;color:var(--w);font-family:var(--fb);display:block;}
-.chat-kpi .kl{font-size:8px;text-transform:uppercase;letter-spacing:1px;}
+.chat-name{font-family:var(--fd);font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.chat-kpis{font-family:var(--fd);font-size:9px;color:rgba(255,255,255,.4);display:flex;gap:18px;margin-left:auto;}
+.chat-kpi .kv{font-family:var(--fd);font-size:18px;font-weight:900;color:var(--w);display:block;}
+.chat-kpi .kl{font-family:var(--fd);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;}
 #messages{flex:1;overflow-y:auto;overflow-x:hidden;padding:24px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth;}
 #messages::-webkit-scrollbar{width:4px;}
 #messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:4px;}
 .msg{display:flex;gap:10px;}
 .msg.user{flex-direction:row-reverse;}
-.mav{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fb);font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;}
-.msg.ai .mav{background:var(--grad);color:var(--n3);}
+.mav{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:12px;font-weight:900;flex-shrink:0;margin-top:2px;text-transform:uppercase;}
+.msg.ai .mav{background:var(--grad);color:#fff;}
 .msg.user .mav{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.1);}
-.bubble{max-width:82%;padding:14px 18px;border-radius:12px;font-size:14px;line-height:1.75;}
+.bubble{max-width:82%;padding:14px 18px;border-radius:12px;font-size:13.5px;line-height:1.8;font-family:var(--fb);font-weight:400;}
 .msg.ai .bubble{background:var(--n1);border:1px solid rgba(255,255,255,.08);border-top-left-radius:3px;color:var(--w);}
 .msg.user .bubble{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);border-top-right-radius:3px;color:var(--w);}
-.bubble h3{font-family:var(--fm);font-size:9px;letter-spacing:2px;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:14px 0 6px;font-weight:700;}
+.bubble h3{font-family:var(--fd);font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:16px 0 7px;}
 .bubble h3:first-child{margin-top:0;}
-.bubble ul{padding-left:16px;display:flex;flex-direction:column;gap:4px;}
-.bubble li{font-size:13.5px;color:rgba(255,255,255,.8);}
+.bubble ul{padding-left:16px;display:flex;flex-direction:column;gap:5px;}
+.bubble li{font-size:13px;color:rgba(255,255,255,.85);}
 .bubble strong{color:var(--w);font-weight:700;}
-.bubble hr{border:none;border-top:1px solid rgba(255,255,255,.08);margin:12px 0;}
+.bubble hr{border:none;border-top:1px solid rgba(255,255,255,.08);margin:13px 0;}
 .bubble a{color:var(--y);text-decoration:underline;}
-.tag{display:inline-block;font-family:var(--fm);font-size:9px;font-weight:700;padding:3px 8px;border-radius:4px;margin-right:4px;letter-spacing:.5px;text-transform:uppercase;}
+.tag{display:inline-block;font-family:var(--fd);font-size:9px;font-weight:900;padding:3px 9px;border-radius:4px;margin-right:4px;letter-spacing:1px;text-transform:uppercase;}
 .tag.good{background:rgba(46,204,113,.15);color:var(--good);border:1px solid rgba(46,204,113,.2);}
 .tag.warn{background:rgba(255,204,0,.15);color:var(--y);border:1px solid rgba(255,204,0,.2);}
 .tag.bad{background:rgba(234,91,12,.15);color:var(--o);border:1px solid rgba(234,91,12,.2);}
@@ -114,56 +113,61 @@ header{display:flex;align-items:center;gap:14px;padding:0 22px;height:56px;backg
 .typing-bubble span:nth-child(3){animation-delay:.3s;}
 @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-7px)}}
 .input-wrap{padding:14px 24px;border-top:1px solid rgba(255,255,255,.07);background:var(--n1);display:flex;gap:10px;align-items:flex-end;flex-shrink:0;}
-textarea#input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:var(--w);font-family:var(--fb);font-size:14px;padding:10px 14px;resize:none;min-height:42px;max-height:100px;outline:none;transition:border-color .2s;line-height:1.5;}
+textarea#input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:var(--w);font-family:var(--fb);font-size:13.5px;padding:10px 14px;resize:none;min-height:42px;max-height:100px;outline:none;transition:border-color .2s;line-height:1.5;}
 textarea#input:focus{border-color:var(--o);}
 textarea#input::placeholder{color:rgba(255,255,255,.25);}
-#send-btn{width:42px;height:42px;background:var(--grad);border:none;border-radius:8px;color:var(--n3);font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+#send-btn{width:42px;height:42px;background:var(--grad);border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
 #send-btn:hover{opacity:.9;}
 #send-btn:disabled{opacity:.3;cursor:default;}
 .empty-state{margin:auto;text-align:center;padding:48px;opacity:.4;}
-.empty-state .big{font-family:var(--fd);font-size:60px;font-weight:400;font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.empty-state p{font-size:14px;color:rgba(255,255,255,.5);margin-top:10px;line-height:1.6;}
+.empty-state .big{font-family:var(--fd);font-size:64px;font-weight:900;text-transform:uppercase;letter-spacing:2px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.empty-state p{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.5);margin-top:10px;line-height:1.6;}
 .skel{height:10px;border-radius:4px;background:linear-gradient(90deg,rgba(255,255,255,.05) 25%,rgba(255,255,255,.1) 50%,rgba(255,255,255,.05) 75%);background-size:200%;animation:shimmer 1.4s infinite;margin-bottom:6px;}
 @keyframes shimmer{0%{background-position:200%}100%{background-position:-200%}}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:2000;backdrop-filter:blur(6px);}
 .modal-overlay.show{display:flex;}
-.modal-box{background:var(--n1);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;width:480px;display:flex;flex-direction:column;gap:14px;box-shadow:0 32px 80px rgba(0,0,0,.5);max-height:92vh;overflow-y:auto;}
-.modal-title{font-family:var(--fd);font-size:21px;font-weight:400;font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.modal-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;}
+.modal-box{background:var(--n1);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;width:500px;display:flex;flex-direction:column;gap:14px;box-shadow:0 32px 80px rgba(0,0,0,.5);max-height:92vh;overflow-y:auto;}
+.modal-title{font-family:var(--fd);font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:1px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.modal-desc{font-family:var(--fb);font-size:13px;color:rgba(255,255,255,.45);line-height:1.6;}
 .mf{display:flex;flex-direction:column;gap:5px;}
-.mf label{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;font-weight:500;}
+.mf label{font-family:var(--fd);font-size:9px;font-weight:900;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.5px;}
 .mf input,.mf select,.mf textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:var(--w);font-family:var(--fm);font-size:12px;padding:8px 10px;outline:none;width:100%;resize:none;}
 .mf input:focus,.mf select:focus,.mf textarea:focus{border-color:var(--o);}
 .mf input::placeholder,.mf textarea::placeholder{color:rgba(255,255,255,.25);}
-.mf textarea{min-height:65px;}
+.mf textarea{min-height:60px;}
 .mf select option{background:var(--n2);}
 .modal-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .modal-sep{border:none;border-top:1px solid rgba(255,255,255,.08);margin:2px 0;}
-.modal-sub{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:2px;margin:4px 0 8px;}
+.modal-sub{font-family:var(--fd);font-size:10px;font-weight:900;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:2px;margin:4px 0 8px;}
 .modal-actions{display:flex;gap:8px;margin-top:4px;}
-.modal-actions button{flex:1;padding:10px;border:none;border-radius:6px;font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;}
-.m-confirm{background:var(--grad);color:var(--n3);}
+.modal-actions button{flex:1;padding:10px;border:none;border-radius:6px;font-family:var(--fd);font-size:13px;font-weight:900;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;}
+.m-confirm{background:var(--grad);color:#fff;}
 .m-cancel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);}
 .dmodal-box{width:360px;}
-/* MQL fields builder */
-.mql-fields-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px;}
-.mql-field-row{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:center;}
-.mql-field-row input{padding:6px 8px;font-size:11px;}
-.mql-field-row select{padding:6px 8px;font-size:11px;}
-.mql-del-btn{background:rgba(234,91,12,.15);border:1px solid rgba(234,91,12,.3);border-radius:5px;color:var(--o);font-size:12px;padding:5px 8px;cursor:pointer;font-family:var(--fb);}
+/* MQL PROFILES */
+.mql-profile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px;margin-bottom:8px;}
+.mql-profile-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.mql-profile-title{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w);text-transform:uppercase;letter-spacing:.5px;}
+.mql-del-profile{background:transparent;border:none;color:rgba(255,255,255,.3);font-size:14px;cursor:pointer;}
+.mql-del-profile:hover{color:var(--o);}
+.mql-fields-list{display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+.mql-field-row{display:grid;grid-template-columns:1fr 100px 1fr auto;gap:5px;align-items:center;}
+.mql-field-row input,.mql-field-row select{padding:6px 8px;font-size:11px;font-family:var(--fm);}
+.mql-del-btn{background:rgba(234,91,12,.15);border:1px solid rgba(234,91,12,.3);border-radius:5px;color:var(--o);font-size:11px;padding:5px 7px;cursor:pointer;}
 .mql-del-btn:hover{background:rgba(234,91,12,.25);}
-.add-field-btn{background:transparent;border:1px dashed rgba(255,255,255,.2);border-radius:6px;color:rgba(255,255,255,.4);font-size:11px;padding:7px;cursor:pointer;font-family:var(--fb);width:100%;transition:all .2s;}
-.add-field-btn:hover{border-color:var(--o);color:var(--o);}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(14px);background:var(--n1);border:1px solid rgba(255,255,255,.12);padding:9px 18px;border-radius:8px;font-family:var(--fm);font-size:11px;color:var(--w);opacity:0;transition:all .25s;pointer-events:none;z-index:1000;box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.add-field-btn,.add-profile-btn{background:transparent;border:1px dashed rgba(255,255,255,.2);border-radius:6px;color:rgba(255,255,255,.4);font-size:11px;font-family:var(--fd);font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:7px;cursor:pointer;width:100%;transition:all .2s;margin-top:5px;}
+.add-field-btn:hover,.add-profile-btn:hover{border-color:var(--o);color:var(--o);}
+.add-profile-btn{margin-top:0;}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(14px);background:var(--n1);border:1px solid rgba(255,255,255,.12);padding:9px 18px;border-radius:8px;font-family:var(--fd);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--w);opacity:0;transition:all .25s;pointer-events:none;z-index:1000;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">Samuelzinho <em>Meta</em></div>
+  <div class="logo">Samuelzinho <span>Meta</span></div>
   <div class="hbadge">Tráfego Tributário</div>
   <div class="hright">
-    <div class="scheduler-badge" id="sched-badge">⏰ Agendador ativo</div>
+    <div class="sched-badge" id="sched-badge">⏰ Agendador ativo</div>
     <button class="hbtn" id="add-client-btn" onclick="openClientModal()" style="display:none">+ Cliente</button>
     <button class="hbtn" id="reload-btn" onclick="reloadAll()" style="display:none">↻ Atualizar</button>
     <div class="hconn"><div class="hcdot" id="hcdot"></div><span id="hclabel">Desconectado</span></div>
@@ -171,30 +175,39 @@ textarea#input::placeholder{color:rgba(255,255,255,.25);}
 </header>
 <div class="main">
   <div class="sidebar">
+    <!-- CONFIG -->
     <div class="sbs">
       <div class="sbl">Configuração</div>
-      <div class="f"><label>Chave API Anthropic</label><input type="password" id="anthropic-key" placeholder="sk-ant-..."/><div class="hint"><a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com</a></div></div>
-      <div class="f"><label>Google Sheets API Key</label><input type="password" id="sheets-key" placeholder="AIzaSy..."/><div class="hint"><a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a> → Sheets API</div></div>
-      <div class="f"><label>ClickUp API Key</label><input type="password" id="clickup-key" placeholder="pk_..."/><div class="hint"><a href="https://app.clickup.com/settings/apps" target="_blank">clickup.com/settings/apps</a></div></div>
+      <div class="f"><label>API Anthropic</label><input type="password" id="anthropic-key" placeholder="sk-ant-..."/></div>
+      <div class="f"><label>Google Sheets API Key</label><input type="password" id="sheets-key" placeholder="AIzaSy..."/></div>
+      <div class="f"><label>ClickUp API Key</label><input type="password" id="clickup-key" placeholder="pk_..."/></div>
+      <div class="f">
+        <label>ID Planilha Unificada (Stract)</label>
+        <input type="text" id="unified-sheet-id" placeholder="12d6Qd9..."/>
+        <div class="hint">Planilha central com todas as campanhas</div>
+      </div>
       <button class="btn btn-o" onclick="saveConfig()">Salvar configuração</button>
     </div>
+    <!-- CLIENTS -->
     <div class="sbs" id="clients-section" style="display:none">
       <div class="sbl">Clientes</div>
       <div id="clients-list"></div>
       <button class="btn btn-g" onclick="openClientModal()" style="margin-top:8px">+ Adicionar cliente</button>
     </div>
+    <!-- METRICS -->
     <div class="sbs" id="metrics-section" style="display:none">
       <div class="sbl" id="metrics-lbl">Métricas</div>
       <div class="mgrid" id="metric-grid"></div>
       <div class="mql-wrap" id="mql-wrap" style="display:none">
         <div style="display:flex;justify-content:space-between;margin-bottom:3px">
-          <span style="font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.4)">MQL%</span>
-          <span style="font-family:var(--fm);font-size:9px" id="mql-pct-lbl"></span>
+          <span style="font-family:var(--fd);font-size:9px;font-weight:700;color:rgba(255,255,255,.4)">MQL%</span>
+          <span style="font-family:var(--fd);font-size:9px;font-weight:700" id="mql-pct-lbl"></span>
         </div>
         <div class="mql-bg"><div class="mql-fill" id="mql-bar"></div></div>
         <div class="mql-labels"><span id="mql-real-lbl"></span><span id="mql-meta-lbl"></span></div>
       </div>
     </div>
+    <!-- PERIOD -->
     <div class="sbs" id="period-section" style="display:none">
       <div class="sbl">Período</div>
       <div class="f" style="margin-bottom:0">
@@ -209,16 +222,19 @@ textarea#input::placeholder{color:rgba(255,255,255,.25);}
         </select>
       </div>
     </div>
+    <!-- CAMPAIGNS -->
     <div class="sbs" id="camps-section" style="display:none">
       <div class="sbl">Campanhas</div>
       <div id="camps-list"></div>
     </div>
+    <!-- REPORTS -->
     <div class="sbs" id="reports-section" style="display:none">
       <div class="sbl">Relatórios → ClickUp</div>
       <button class="rpbtn" onclick="openReportModal('diario')">📋 Relatório diário</button>
       <button class="rpbtn" onclick="openReportModal('semanal')">📊 Relatório semanal</button>
       <button class="rpbtn" onclick="openReportModal('mensal')">📈 Relatório mensal</button>
     </div>
+    <!-- QUICK ANALYSIS -->
     <div class="sbs" id="qa-section" style="display:none">
       <div class="sbl">Análises rápidas</div>
       <div class="qalist">
@@ -232,6 +248,7 @@ textarea#input::placeholder{color:rgba(255,255,255,.25);}
       </div>
     </div>
   </div>
+  <!-- CHAT -->
   <div class="chat-area">
     <div class="chat-hdr" id="chat-hdr" style="display:none">
       <div class="sdot s-on"></div>
@@ -255,27 +272,23 @@ textarea#input::placeholder{color:rgba(255,255,255,.25);}
 <div class="modal-overlay" id="client-modal">
   <div class="modal-box">
     <div class="modal-title" id="cm-title">Novo cliente</div>
-    <div class="modal-desc">Preencha os dados, metas e os campos do formulário deste cliente para qualificação de MQL.</div>
+    <div class="modal-desc">Configure os dados básicos e os perfis de MQL por campanha.</div>
     <hr class="modal-sep"/>
     <div class="modal-sub">Dados básicos</div>
-    <div class="mf"><label>Nome do cliente</label><input type="text" id="cm-name" placeholder="Ex: Ornaghi"/></div>
-    <div class="mf"><label>ID da planilha Google Sheets</label><input type="text" id="cm-sheet" placeholder="1BxiMV..."/><div style="font-size:9px;color:rgba(255,255,255,.3);margin-top:2px">Na URL entre /d/ e /edit</div></div>
-    <div class="mf"><label>ClickUp List ID (deste cliente)</label><input type="text" id="cm-culist" placeholder="901234567"/></div>
-    <hr class="modal-sep"/>
-    <div class="modal-sub">Metas de performance</div>
-    <div class="mf"><label>Tese da campanha</label><input type="text" id="cm-tese" placeholder="Ex: Negociação de Dívidas com Receita Federal"/></div>
-    <div class="modal-row">
-      <div class="mf"><label>CPL desejado (R$)</label><input type="number" id="cm-cpl" placeholder="10"/></div>
-      <div class="mf"><label>MQL% desejado</label><input type="number" id="cm-mql" placeholder="40"/></div>
+    <div class="mf"><label>Nome do cliente</label><input type="text" id="cm-name" placeholder="Ex: Essência Gestão"/></div>
+    <div class="mf">
+      <label>ID Planilha Looker (CRM)</label>
+      <input type="text" id="cm-sheet" placeholder="1BxiMV..."/>
+      <div style="font-size:9px;color:rgba(255,255,255,.3);margin-top:2px">Planilha do cliente — usada para ler a aba CRM</div>
     </div>
+    <div class="mf"><label>ClickUp List ID (deste cliente)</label><input type="text" id="cm-culist" placeholder="901234567"/></div>
+    <div class="mf"><label>Nome exato na planilha unificada (Conta / Cliente)</label><input type="text" id="cm-acctname" placeholder="Ex: Essência Gestão"/></div>
     <hr class="modal-sep"/>
-    <div class="modal-sub">Campos do formulário para qualificação de MQL</div>
-    <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5">Adicione os campos do formulário deste cliente e defina o critério de qualificação. O Samuelzinho usará isso para identificar MQLs automaticamente.</div>
-    <div class="mql-fields-list" id="mql-fields-list"></div>
-    <button class="add-field-btn" onclick="addMqlField()">+ Adicionar campo do formulário</button>
-    <hr class="modal-sep"/>
-    <div class="mf"><label>Observações adicionais sobre o MQL</label><textarea id="cm-obs" placeholder="Ex: Priorizar leads que mencionarem dívida ativa ou parcelamento"></textarea></div>
-    <div class="modal-actions">
+    <div class="modal-sub">Perfis de MQL por campanha</div>
+    <div class="modal-desc" style="margin-bottom:10px">Adicione um perfil para cada campanha ativa. O Samuelzinho cruzará o campo "Campanha" do CRM com o perfil correto.</div>
+    <div id="mql-profiles-list"></div>
+    <button class="add-profile-btn" onclick="addMqlProfile()">+ Adicionar perfil de campanha</button>
+    <div class="modal-actions" style="margin-top:14px">
       <button class="m-cancel" onclick="closeClientModal()">Cancelar</button>
       <button class="m-confirm" onclick="saveClient()">Salvar cliente</button>
     </div>
@@ -300,14 +313,17 @@ textarea#input::placeholder{color:rgba(255,255,255,.25);}
 
 <script>
 // ── STATE ─────────────────────────────────────────────────────────────
-let anthropicKey='', sheetsKey='', clickupKey='';
-let clients=[], activeClientId=null, periodDays=30, editingClientId=null;
-const sheetData={}, chatHistories={};
+let anthropicKey='',sheetsKey='',clickupKey='',unifiedSheetId='';
+let clients=[],activeClientId=null,periodDays=30,editingClientId=null;
+const sheetData={},chatHistories={};
+let schedInterval=null;
+const schedState={lastDaily:null,lastWeekly:null,lastMonthly:null};
+let profileCount=0,fieldCount=0;
 
 // ── LOCALSTORAGE ──────────────────────────────────────────────────────
 function save(){
   try{
-    localStorage.setItem('sm_cfg',JSON.stringify({anthropicKey,sheetsKey,clickupKey,periodDays}));
+    localStorage.setItem('sm_cfg',JSON.stringify({anthropicKey,sheetsKey,clickupKey,unifiedSheetId,periodDays}));
     localStorage.setItem('sm_clients',JSON.stringify(clients));
     localStorage.setItem('sm_chats',JSON.stringify(Object.fromEntries(Object.entries(chatHistories).map(([k,v])=>[k,v.slice(-30)]))));
     localStorage.setItem('sm_sched',JSON.stringify(schedState));
@@ -319,11 +335,11 @@ function load(){
     if(cfg.anthropicKey){anthropicKey=cfg.anthropicKey;document.getElementById('anthropic-key').value=cfg.anthropicKey;}
     if(cfg.sheetsKey){sheetsKey=cfg.sheetsKey;document.getElementById('sheets-key').value=cfg.sheetsKey;}
     if(cfg.clickupKey){clickupKey=cfg.clickupKey;document.getElementById('clickup-key').value=cfg.clickupKey;}
+    if(cfg.unifiedSheetId){unifiedSheetId=cfg.unifiedSheetId;document.getElementById('unified-sheet-id').value=cfg.unifiedSheetId;}
     if(cfg.periodDays){periodDays=cfg.periodDays;document.getElementById('period-select').value=String(periodDays);}
     clients=JSON.parse(localStorage.getItem('sm_clients')||'[]');
     Object.assign(chatHistories,JSON.parse(localStorage.getItem('sm_chats')||'{}'));
-    const sc=JSON.parse(localStorage.getItem('sm_sched')||'{}');
-    Object.assign(schedState,sc);
+    Object.assign(schedState,JSON.parse(localStorage.getItem('sm_sched')||'{}'));
     return !!(cfg.anthropicKey&&cfg.sheetsKey&&clients.length);
   }catch(e){return false;}
 }
@@ -333,6 +349,7 @@ function saveConfig(){
   anthropicKey=document.getElementById('anthropic-key').value.trim();
   sheetsKey=document.getElementById('sheets-key').value.trim();
   clickupKey=document.getElementById('clickup-key').value.trim();
+  unifiedSheetId=document.getElementById('unified-sheet-id').value.trim();
   if(!anthropicKey||!sheetsKey){showToast('Preencha as chaves Anthropic e Google Sheets.');return;}
   save();
   document.getElementById('clients-section').style.display='block';
@@ -345,23 +362,24 @@ function saveConfig(){
 }
 
 // ── GOOGLE SHEETS ─────────────────────────────────────────────────────
-async function sheetsGet(sheetId,range){
-  const url=`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${encodeURIComponent(range)}?key=${sheetsKey}`;
+async function sheetsGet(shId,range){
+  const url=`https://sheets.googleapis.com/v4/spreadsheets/${shId}/values/${encodeURIComponent(range)}?key=${sheetsKey}`;
   const r=await fetch(url);const d=await r.json();
   if(d.error)throw new Error(d.error.message);
   return d.values||[];
 }
 
 function parseRows(rows){
-  if(!rows.length)return{headers:[],data:[]};
+  if(!rows||!rows.length)return{headers:[],data:[]};
+  // Find header row — first row where most cells are text (not dates/numbers)
   const isDate=v=>/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}$/.test((v||'').trim());
-  const isNum=v=>/^R?\$?\s*[\d.,]+$/.test((v||'').trim().replace(/\s/g,''));
+  const isNum=v=>/^R?\$?\s*[\d.,]+$/.test((v||'').trim());
   let hi=0;
   for(let i=0;i<Math.min(rows.length,5);i++){
     const cells=rows[i].map(c=>(c||'').trim()).filter(Boolean);
     if(cells.length<2)continue;
-    const textCount=cells.filter(c=>!isDate(c)&&!isNum(c)).length;
-    if(textCount>=cells.length*0.4){hi=i;break;}
+    const txt=cells.filter(c=>!isDate(c)&&!isNum(c)).length;
+    if(txt>=cells.length*0.4){hi=i;break;}
   }
   const headers=rows[hi].map(h=>(h||'').trim());
   const data=rows.slice(hi+1).filter(r=>r.some(c=>(c||'').trim())).map(r=>{
@@ -370,7 +388,7 @@ function parseRows(rows){
   return{headers,data};
 }
 
-// ── NUMBER PARSING ────────────────────────────────────────────────────
+// ── NUMBER & DATE PARSING ─────────────────────────────────────────────
 function pn(v){
   if(!v&&v!==0)return 0;
   let s=String(v).replace(/R\$|%|\s/g,'').trim();
@@ -381,110 +399,116 @@ function pn(v){
 }
 function sumF(rows,f){return rows.reduce((a,r)=>a+pn(r[f]),0);}
 function avgF(rows,f){const v=rows.map(r=>pn(r[f])).filter(x=>x>0);return v.length?v.reduce((a,b)=>a+b,0)/v.length:0;}
+function getVal(rows,cols){for(const c of cols){const v=sumF(rows,c);if(v>0)return v;}return 0;}
+function getAvg(rows,cols){for(const c of cols){const v=avgF(rows,c);if(v>0)return v;}return 0;}
+function calcSpend(r){return getVal(r,['Investimento','Investimento (R$)','Cost','Spend']);}
+function calcImpr(r){return getVal(r,['Impressões','Impressions']);}
+function calcClks(r){return getVal(r,['Cliques','Clicks']);}
+function calcLeads(r){return getVal(r,['Leads Form Nativo','Leads','Lead','Resultado (leads)']);}
+function calcCTR(r){const d=getAvg(r,['CTR (%)','CTR']);if(d>0)return d;const cl=calcClks(r),im=calcImpr(r);return im>0?cl/im*100:0;}
+function calcCPM(r){const d=getAvg(r,['CPM (R$)','CPM']);if(d>0)return d;const sp=calcSpend(r),im=calcImpr(r);return im>0?sp/im*1000:0;}
+function calcFreq(r){return getAvg(r,['Frequência','Frequency']);}
 
-function getVal(rows,cols){
-  if(!rows.length)return 0;
-  for(const col of cols){const v=sumF(rows,col);if(v>0)return v;}
-  return 0;
-}
-function getAvg(rows,cols){
-  if(!rows.length)return 0;
-  for(const col of cols){const v=avgF(rows,col);if(v>0)return v;}
-  return 0;
-}
-function calcSpend(rows){return getVal(rows,['Investimento','Investimento (R$)','Cost','Spend','Custo']);}
-function calcImpressions(rows){return getVal(rows,['Impressões','Impressions','Impressoes']);}
-function calcClicks(rows){return getVal(rows,['Cliques','Clicks']);}
-function calcLeads(rows){return getVal(rows,['Leads Form Nativo','Leads','Lead','Resultado (leads)','Results','Leads (form)']);}
-function calcCTR(rows){
-  const d=getAvg(rows,['CTR (%)','CTR (Link Click-Through Rate)','CTR']);
-  if(d>0)return d;
-  const cl=calcClicks(rows),imp=calcImpressions(rows);
-  return imp>0?cl/imp*100:0;
-}
-function calcCPM(rows){
-  const d=getAvg(rows,['CPM (R$)','CPM (Cost per 1000 Impressions)','CPM']);
-  if(d>0)return d;
-  const sp=calcSpend(rows),imp=calcImpressions(rows);
-  return imp>0?sp/imp*1000:0;
-}
-function calcFreq(rows){return getAvg(rows,['Frequência','Frequency','Freq']);}
-
-// ── DATE HELPERS ──────────────────────────────────────────────────────
-function cutoff(){const d=new Date();d.setDate(d.getDate()-periodDays);d.setHours(0,0,0,0);return d;}
 function parseDate(s){
-  if(!s)return null;
-  s=String(s).trim();
-  if(!s)return null;
-  // YYYY-MM-DD (ISO)
-  let m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s);
-  if(m)return new Date(+m[1],+m[2]-1,+m[3]);
-  // DD/MM/YYYY (Brazilian)
-  m=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s);
-  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
-  // DD/MM/YY
-  m=/^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(s);
-  if(m)return new Date(2000+(+m[3]),+m[2]-1,+m[1]);
-  // DD-MM-YYYY
-  m=/^(\d{1,2})-(\d{1,2})-(\d{4})$/.exec(s);
-  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
-  // Try native (last resort)
-  const d=new Date(s);
-  return isNaN(d)?null:d;
+  if(!s)return null;s=String(s).trim();
+  let m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s);if(m)return new Date(+m[1],+m[2]-1,+m[3]);
+  m=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s);if(m)return new Date(+m[3],+m[2]-1,+m[1]);
+  m=/^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(s);if(m)return new Date(2000+(+m[3]),+m[2]-1,+m[1]);
+  m=/^(\d{1,2})-(\d{1,2})-(\d{4})$/.exec(s);if(m)return new Date(+m[3],+m[2]-1,+m[1]);
+  const d=new Date(s);return isNaN(d)?null:d;
 }
+function cutoff(){const d=new Date();d.setDate(d.getDate()-periodDays);d.setHours(0,0,0,0);return d;}
+function inPeriod(ds){if(periodDays>=9999)return true;const d=parseDate(ds);return!d||isNaN(d)||d>=cutoff();}
+function inRange(ds,sd,ed){const d=parseDate(ds);if(!d||isNaN(d))return false;return d>=sd&&d<=ed;}
 function ymd(d){return d.toISOString().split('T')[0];}
 function yesterday(){const d=new Date();d.setDate(d.getDate()-1);return ymd(d);}
-function lastWeek(){
-  const n=new Date(),day=n.getDay(),de=day===0?7:day;
-  const end=new Date(n);end.setDate(n.getDate()-de);
-  const start=new Date(end);start.setDate(end.getDate()-6);
-  return{start:ymd(start),end:ymd(end)};
-}
-function lastMonth(){
-  const n=new Date();
-  return{start:ymd(new Date(n.getFullYear(),n.getMonth()-1,1)),end:ymd(new Date(n.getFullYear(),n.getMonth(),0))};
-}
+function lastWeek(){const n=new Date(),day=n.getDay(),de=day===0?7:day;const end=new Date(n);end.setDate(n.getDate()-de);const start=new Date(end);start.setDate(end.getDate()-6);return{start:ymd(start),end:ymd(end)};}
+function lastMonth(){const n=new Date();return{start:ymd(new Date(n.getFullYear(),n.getMonth()-1,1)),end:ymd(new Date(n.getFullYear(),n.getMonth(),0))};}
 function fmtBR(d){return d.split('-').reverse().join('/');}
-function inPeriod(ds){
-  if(periodDays>=9999)return true;
-  const d=parseDate(ds);return!d||isNaN(d)||d>=cutoff();
+function periodLabel(){return{7:'7 dias',14:'14 dias',30:'30 dias',60:'60 dias',90:'90 dias',365:'12 meses',9999:'Todo o histórico'}[periodDays]||`${periodDays} dias`;}
+
+// ── MQL PROFILES ──────────────────────────────────────────────────────
+function addMqlProfile(prof=null){
+  const list=document.getElementById('mql-profiles-list');
+  const pid=profileCount++;
+  const div=document.createElement('div');div.className='mql-profile';div.id=`prof-${pid}`;
+  div.innerHTML=`
+    <div class="mql-profile-hdr">
+      <div style="display:flex;flex-direction:column;gap:5px;flex:1;margin-right:10px">
+        <input type="text" placeholder="Nome da campanha (ex: Equiparação Hospitalar)" value="${escH(prof?.campanha||'')}" class="prof-camp" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:11px;padding:6px 9px;outline:none;"/>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <input type="number" placeholder="CPL meta (R$)" value="${prof?.cpl||''}" class="prof-cpl" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:11px;padding:6px 8px;outline:none;"/>
+          <input type="number" placeholder="MQL% meta" value="${prof?.mqlPct||''}" class="prof-mql" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:11px;padding:6px 8px;outline:none;"/>
+        </div>
+      </div>
+      <button class="mql-del-profile" onclick="document.getElementById('prof-${pid}').remove()">✕</button>
+    </div>
+    <div style="font-family:var(--fd);font-size:9px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Critérios de qualificação</div>
+    <div class="mql-fields-list" id="fields-${pid}"></div>
+    <button class="add-field-btn" onclick="addMqlField('${pid}')">+ Campo do formulário</button>`;
+  list.appendChild(div);
+  (prof?.fields||[]).forEach(f=>addMqlField(pid,f));
 }
-function inRange(ds,sd,ed){
-  const d=parseDate(ds);if(!d||isNaN(d))return false;
-  return d>=sd&&d<=ed;
+
+function addMqlField(pid,f=null){
+  const list=document.getElementById(`fields-${pid}`);
+  const fid=fieldCount++;
+  const div=document.createElement('div');div.className='mql-field-row';div.id=`frow-${fid}`;
+  div.innerHTML=`
+    <input type="text" placeholder="Campo (ex: Cargo)" value="${escH(f?.name||'')}" class="mf-name" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:11px;padding:6px 8px;outline:none;"/>
+    <select class="mf-crit" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:10px;padding:6px 5px;outline:none;">
+      <option value="contains" ${f?.crit==='contains'?'selected':''}>contém</option>
+      <option value="notcontains" ${f?.crit==='notcontains'?'selected':''}>não contém</option>
+      <option value="gt" ${f?.crit==='gt'?'selected':''}>maior que</option>
+      <option value="any" ${f?.crit==='any'?'selected':''}>qualquer valor</option>
+    </select>
+    <input type="text" placeholder="Valor" value="${escH(f?.val||'')}" class="mf-val" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);font-size:11px;padding:6px 8px;outline:none;"/>
+    <button class="mql-del-btn" onclick="document.getElementById('frow-${fid}').remove()">✕</button>`;
+  list.appendChild(div);
 }
-function periodLabel(){
-  return{7:'7 dias',14:'14 dias',30:'30 dias',60:'60 dias',90:'90 dias',365:'12 meses',9999:'Todo o histórico'}[periodDays]||`${periodDays} dias`;
+
+function getMqlProfiles(){
+  return [...document.querySelectorAll('#mql-profiles-list .mql-profile')].map(p=>({
+    campanha:p.querySelector('.prof-camp').value.trim(),
+    cpl:parseFloat(p.querySelector('.prof-cpl').value)||0,
+    mqlPct:parseFloat(p.querySelector('.prof-mql').value)||40,
+    fields:[...p.querySelectorAll('.mql-field-row')].map(r=>({
+      name:r.querySelector('.mf-name').value.trim(),
+      crit:r.querySelector('.mf-crit').value,
+      val:r.querySelector('.mf-val').value.trim(),
+    })).filter(f=>f.name),
+  })).filter(p=>p.campanha);
+}
+
+// ── MQL EVALUATION ────────────────────────────────────────────────────
+function getProfile(lead,client){
+  // Try to match lead to a campaign profile
+  const campVal=(lead['Campanha']||lead['Campanha de Origem']||'').toLowerCase();
+  if(campVal&&client.mqlProfiles?.length){
+    const match=client.mqlProfiles.find(p=>campVal.includes(p.campanha.toLowerCase())||p.campanha.toLowerCase().split(' ').some(w=>w.length>3&&campVal.includes(w)));
+    if(match)return match;
+  }
+  // Return first profile as default
+  return client.mqlProfiles?.[0]||null;
+}
+
+function isMQL(lead,client){
+  const prof=getProfile(lead,client);
+  if(!prof||!prof.fields?.length)return false;
+  let pass=0;
+  for(const f of prof.fields){
+    const val=(lead[f.name]||'').toLowerCase();
+    const target=(f.val||'').toLowerCase();
+    if(f.crit==='any'&&val.length>0){pass++;continue;}
+    if(f.crit==='contains'&&val.includes(target)){pass++;continue;}
+    if(f.crit==='notcontains'&&!val.includes(target)){pass++;continue;}
+    if(f.crit==='gt'&&pn(lead[f.name])>pn(f.val)){pass++;continue;}
+  }
+  return pass>=Math.ceil(prof.fields.length*0.5);
 }
 
 // ── CLIENT CRUD ───────────────────────────────────────────────────────
 function genId(){return'c'+Date.now();}
-let mqlFieldCount=0;
-
-function addMqlField(name='',crit='',val=''){
-  const list=document.getElementById('mql-fields-list');
-  const id=mqlFieldCount++;
-  const div=document.createElement('div');div.className='mql-field-row';div.id=`mf-${id}`;
-  div.innerHTML=`
-    <input type="text" placeholder="Nome do campo" value="${escH(name)}" style="padding:6px 8px;font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);outline:none;" class="mf-name"/>
-    <input type="text" placeholder="Valor qualificador" value="${escH(val)}" style="padding:6px 8px;font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);outline:none;" class="mf-val"/>
-    <select style="padding:6px 5px;font-size:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:var(--w);font-family:var(--fm);outline:none;" class="mf-crit">
-      <option value="contains" ${crit==='contains'?'selected':''}>contém</option>
-      <option value="notcontains" ${crit==='notcontains'?'selected':''}>não contém</option>
-      <option value="gt" ${crit==='gt'?'selected':''}>maior que</option>
-      <option value="any" ${crit==='any'?'selected':''}>qualquer valor</option>
-    </select>
-    <button class="mql-del-btn" onclick="document.getElementById('mf-${id}').remove()">✕</button>`;
-  list.appendChild(div);
-}
-
-function getMqlFields(){
-  return [...document.querySelectorAll('#mql-fields-list .mql-field-row')].map(row=>({
-    name:row.querySelector('.mf-name').value.trim(),
-    crit:row.querySelector('.mf-crit').value,
-    val:row.querySelector('.mf-val').value.trim(),
-  })).filter(f=>f.name);
-}
 
 function openClientModal(id=null){
   editingClientId=id;
@@ -493,29 +517,23 @@ function openClientModal(id=null){
   document.getElementById('cm-name').value=c?.name||'';
   document.getElementById('cm-sheet').value=c?.sheetId||'';
   document.getElementById('cm-culist').value=c?.cuListId||'';
-  document.getElementById('cm-tese').value=c?.tese||'';
-  document.getElementById('cm-cpl').value=c?.cpl||'';
-  document.getElementById('cm-mql').value=c?.mqlPct||'40';
-  document.getElementById('cm-obs').value=c?.obs||'';
-  document.getElementById('mql-fields-list').innerHTML='';
-  mqlFieldCount=0;
-  (c?.mqlFields||[]).forEach(f=>addMqlField(f.name,f.crit,f.val));
+  document.getElementById('cm-acctname').value=c?.acctName||'';
+  document.getElementById('mql-profiles-list').innerHTML='';
+  profileCount=0;fieldCount=0;
+  (c?.mqlProfiles||[]).forEach(p=>addMqlProfile(p));
   document.getElementById('client-modal').classList.add('show');
 }
 function closeClientModal(){document.getElementById('client-modal').classList.remove('show');editingClientId=null;}
 
 async function saveClient(){
   const name=document.getElementById('cm-name').value.trim();
-  const sheetId=document.getElementById('cm-sheet').value.trim();
-  if(!name||!sheetId){showToast('Nome e ID da planilha são obrigatórios.');return;}
+  if(!name){showToast('Nome é obrigatório.');return;}
   const client={
-    id:editingClientId||genId(),name,sheetId,
+    id:editingClientId||genId(),name,
+    sheetId:document.getElementById('cm-sheet').value.trim(),
     cuListId:document.getElementById('cm-culist').value.trim(),
-    tese:document.getElementById('cm-tese').value.trim(),
-    cpl:parseFloat(document.getElementById('cm-cpl').value)||0,
-    mqlPct:parseFloat(document.getElementById('cm-mql').value)||40,
-    obs:document.getElementById('cm-obs').value.trim(),
-    mqlFields:getMqlFields(),
+    acctName:document.getElementById('cm-acctname').value.trim()||name,
+    mqlProfiles:getMqlProfiles(),
   };
   if(editingClientId){const i=clients.findIndex(x=>x.id===editingClientId);if(i>-1)clients[i]=client;}
   else clients.push(client);
@@ -534,10 +552,10 @@ function renderClients(){
     const crm=d?d.crm.filter(r=>inPeriod(r['Data'])):[];
     const mqls=crm.filter(r=>isMQL(r,c)).length;
     const mqlPct=crm.length?Math.round(mqls/crm.length*100):0;
-    const dotCls=d?(mqlPct>=c.mqlPct?'s-on':'s-w'):'s-off';
     const leads=d?calcLeads(ads):0;
+    const dot=d?(mqlPct>=(c.mqlProfiles?.[0]?.mqlPct||40)?'s-on':'s-w'):'s-off';
     return`<div class="ci ${activeClientId===c.id?'active':''}" id="ci-${c.id}" onclick="switchClient('${c.id}')">
-      <div class="ci-name"><span class="sdot ${dotCls}"></span>${escH(c.name)}<button class="ci-edit" onclick="event.stopPropagation();openClientModal('${c.id}')">✎</button></div>
+      <div class="ci-name"><span class="sdot ${dot}"></span>${escH(c.name)}<button class="ci-edit" onclick="event.stopPropagation();openClientModal('${c.id}')">✎</button></div>
       <div class="ci-meta">${d?`${leads} leads · ${crm.length} CRM · MQL ${mqlPct}%`:'Carregando...'}</div>
     </div>`;
   }).join('');
@@ -545,26 +563,31 @@ function renderClients(){
 
 // ── LOAD DATA ─────────────────────────────────────────────────────────
 async function loadClientData(clientId){
-  const c=clients.find(x=>x.id===clientId);
-  if(!c||!sheetsKey)return;
+  const c=clients.find(x=>x.id===clientId);if(!c||!sheetsKey)return;
   try{
-    const adsTabs=['Facebook Ads','Meta Ads','Ads','Somatório','Sumário'];
-    let adsRows=[];
-    for(const tab of adsTabs){try{adsRows=await sheetsGet(c.sheetId,`${tab}!A:Z`);if(adsRows.length>1)break;}catch(e){}}
-    const crmTabs=['CRM','Leads','Lead','Formulário','Formulario'];
-    let crmRows=[];
-    for(const tab of crmTabs){try{crmRows=await sheetsGet(c.sheetId,`${tab}!A:Z`);if(crmRows.length>1)break;}catch(e){}}
-    const{data:ads}=parseRows(adsRows);
-    const{data:crm}=parseRows(crmRows);
-    sheetData[clientId]={ads,crm};
-    // Debug: log first few dates to console
-    if(ads.length>0){
-      const dateKey=Object.keys(ads[0]).find(k=>/data/i.test(k))||'Data';
-      console.log(`[${c.name}] ${ads.length} linhas de ads. Datas amostra:`, ads.slice(0,3).map(r=>r[dateKey]));
-      console.log(`[${c.name}] Período: ${periodDays} dias, cutoff:`, cutoff().toLocaleDateString('pt-BR'));
-      const inP=ads.filter(r=>inPeriod(r[dateKey]));
-      console.log(`[${c.name}] Linhas no período:`, inP.length);
+    // Source 1: Unified sheet (Stract) — filter by account name
+    let ads=[];
+    if(unifiedSheetId){
+      try{
+        const rows=await sheetsGet(unifiedSheetId,'Campanhas!A:Z');
+        const{data}=parseRows(rows);
+        const acct=c.acctName||c.name;
+        // Filter by Conta / Cliente column
+        ads=data.filter(r=>{
+          const cv=r['Conta / Cliente']||r['Conta/Cliente']||r['Account']||'';
+          return cv.toLowerCase().includes(acct.toLowerCase())||acct.toLowerCase().includes(cv.toLowerCase());
+        });
+      }catch(e){console.warn('Unified sheet error:',e.message);}
     }
+    // Source 2: Client Looker sheet — CRM tab
+    let crm=[];
+    if(c.sheetId){
+      const crmTabs=['CRM','Leads','Lead','Formulário','Formulario'];
+      for(const tab of crmTabs){
+        try{const rows=await sheetsGet(c.sheetId,`${tab}!A:Z`);if(rows.length>1){const{data}=parseRows(rows);crm=data;break;}}catch(e){}
+      }
+    }
+    sheetData[clientId]={ads,crm};
     renderClients();
     if(activeClientId===clientId){renderMetrics(clientId);renderCamps(clientId);}
   }catch(e){showToast(`Erro ${c.name}: ${e.message}`);}
@@ -574,22 +597,6 @@ async function reloadAll(){
   showToast('Recarregando...');
   for(const c of clients)await loadClientData(c.id);
   showToast('Dados atualizados.');
-}
-
-// ── MQL LOGIC ─────────────────────────────────────────────────────────
-function isMQL(lead,client){
-  const fields=client.mqlFields||[];
-  if(!fields.length)return false;
-  let pass=0;
-  for(const f of fields){
-    const val=(lead[f.name]||'').toLowerCase();
-    const crit=f.crit,target=(f.val||'').toLowerCase();
-    if(crit==='any'&&val.length>0){pass++;continue;}
-    if(crit==='contains'&&val.includes(target)){pass++;continue;}
-    if(crit==='notcontains'&&!val.includes(target)){pass++;continue;}
-    if(crit==='gt'&&pn(lead[f.name])>pn(f.val)){pass++;continue;}
-  }
-  return pass>=Math.ceil(fields.length*0.5);
 }
 
 // ── SWITCH CLIENT ─────────────────────────────────────────────────────
@@ -614,8 +621,7 @@ async function switchClient(id){
 function changePeriod(){
   periodDays=parseInt(document.getElementById('period-select').value);
   document.getElementById('metrics-lbl').textContent=`Métricas · ${periodLabel()}`;
-  save();
-  if(activeClientId){renderMetrics(activeClientId);renderCamps(activeClientId);}
+  save();if(activeClientId){renderMetrics(activeClientId);renderCamps(activeClientId);}
 }
 
 // ── RENDER ────────────────────────────────────────────────────────────
@@ -628,7 +634,8 @@ function renderMetrics(id){
   const ctr=calcCTR(ads),cpm=calcCPM(ads),freq=calcFreq(ads);
   const cplReal=leads>0?spend/leads:0;
   const mqlPct=crm.length>0?mqls/crm.length*100:0;
-  const mqlMeta=c.mqlPct||40;
+  const defProf=c.mqlProfiles?.[0];
+  const mqlMeta=defProf?.mqlPct||40;const cplMeta=defProf?.cpl||0;
   const cards=[
     {l:'Investimento',v:spend>0?'R$'+spend.toLocaleString('pt-BR',{minimumFractionDigits:2}):'—',d:'',cls:'nu'},
     {l:'CTR Médio',v:ctr>0?ctr.toFixed(2)+'%':'—',d:ctr>0?(ctr>=2?'▲ Bom':'▼ Baixo'):'',cls:ctr>=2?'up':ctr>0?'dn':'nu'},
@@ -636,8 +643,8 @@ function renderMetrics(id){
     {l:'Frequência',v:freq>0?freq.toFixed(1)+'x':'—',d:freq>3?'▲ Alta':'OK',cls:freq>3?'dn':'up'},
     {l:'Leads',v:leads||'—',d:'',cls:'nu'},
     {l:'MQLs',v:`${mqls}/${crm.length}`,d:crm.length>0?(mqlPct>=mqlMeta?'▲ Meta OK':'▼ Abaixo'):'Sem CRM',cls:mqlPct>=mqlMeta?'up':'dn'},
-    {l:'CPL Real',v:cplReal>0?'R$'+cplReal.toFixed(2):'—',d:c.cpl>0?(cplReal<=c.cpl?'▲ OK':'▼ Acima'):'',cls:c.cpl>0?(cplReal<=c.cpl?'up':'dn'):'nu'},
-    {l:'CPL Meta',v:c.cpl>0?'R$'+c.cpl.toFixed(2):'—',d:'',cls:'nu'},
+    {l:'CPL Real',v:cplReal>0?'R$'+cplReal.toFixed(2):'—',d:cplMeta>0?(cplReal<=cplMeta?'▲ OK':'▼ Acima'):'',cls:cplMeta>0?(cplReal<=cplMeta?'up':'dn'):'nu'},
+    {l:'CPL Meta',v:cplMeta>0?'R$'+cplMeta.toFixed(2):'—',d:'',cls:'nu'},
   ];
   document.getElementById('metric-grid').innerHTML=cards.map(x=>`<div class="mc"><div class="ml">${x.l}</div><div class="mv">${x.v}</div><div class="md ${x.cls}">${x.d||'&nbsp;'}</div></div>`).join('');
   document.getElementById('chat-kpis').innerHTML=[
@@ -665,16 +672,16 @@ function renderCamps(id){
   const entries=Object.entries(campMap);
   if(!entries.length){list.innerHTML='<div style="font-size:11px;color:rgba(255,255,255,.3)">Sem dados no período.</div>';return;}
   list.innerHTML=entries.map(([name,rows])=>{
-    const ctr=calcCTR(rows),spend=calcSpend(rows);
+    const ctr=calcCTR(rows),spend=calcSpend(rows),leads=calcLeads(rows);
     const cc=ctr>=2?'cp-g':ctr>=1?'cp-w':'cp-b';
     return`<div class="cmp" onclick="analyzeCamp('${escH(id)}','${escH(name)}')">
       <div class="cmp-label">${escH(name)}</div>
-      <div class="cmp-meta"><span class="cpill ${cc}">CTR ${ctr.toFixed(2)}%</span><span>R$${spend.toFixed(0)}</span></div>
+      <div class="cmp-meta"><span class="cpill ${cc}">CTR ${ctr.toFixed(2)}%</span><span>R$${spend.toFixed(0)}</span><span>${leads} leads</span></div>
     </div>`;
   }).join('');
 }
 
-// ── CHAT HISTORY ──────────────────────────────────────────────────────
+// ── CHAT ──────────────────────────────────────────────────────────────
 function hist(id){if(!chatHistories[id])chatHistories[id]=[];return chatHistories[id];}
 function renderChatHistory(id){
   const box=document.getElementById('messages');box.innerHTML='';
@@ -684,50 +691,44 @@ function renderChatHistory(id){
   });
 }
 
-// ── BUILD CONTEXT FOR CLAUDE ──────────────────────────────────────────
-function buildContext(clientId,ads,crm){
+function buildCtx(clientId,ads,crm){
   const c=clients.find(x=>x.id===clientId);
   const spend=calcSpend(ads),leads=calcLeads(ads)||crm.length;
   const ctr=calcCTR(ads),cpm=calcCPM(ads),freq=calcFreq(ads);
   const cplReal=leads>0?spend/leads:0;
-  const mqls=crm.filter(r=>isMQL(r,c));
-  const mqlPct=crm.length>0?(mqls.length/crm.length*100).toFixed(1):0;
   const campKey=Object.keys(ads[0]||{}).find(k=>/campa/i.test(k))||'Campanha';
   const campMap={};ads.forEach(r=>{const k=r[campKey]||'—';if(!campMap[k])campMap[k]=[];campMap[k].push(r);});
-  const campSum=Object.entries(campMap).slice(0,10).map(([n,rows])=>
-    `• ${n}: CTR ${calcCTR(rows).toFixed(2)}%, CPM R$${calcCPM(rows).toFixed(2)}, Gasto R$${calcSpend(rows).toFixed(0)}, Leads ${calcLeads(rows)}`
-  ).join('\n');
-  const mqlFieldsDesc=c.mqlFields?.length?c.mqlFields.map(f=>`  - Campo "${f.name}": ${f.crit} "${f.val||'qualquer'}"`).join('\n'):'  Nenhum campo configurado.';
+  const campSum=Object.entries(campMap).slice(0,10).map(([n,rows])=>{
+    const prof=c.mqlProfiles?.find(p=>n.toLowerCase().includes(p.campanha.toLowerCase()));
+    const crmCamp=crm.filter(l=>(l['Campanha']||'').toLowerCase().includes(n.toLowerCase()));
+    const mqls=crmCamp.filter(l=>isMQL(l,c)).length;
+    return`• ${n}: CTR ${calcCTR(rows).toFixed(2)}%, CPM R$${calcCPM(rows).toFixed(2)}, Gasto R$${calcSpend(rows).toFixed(0)}, Leads ${calcLeads(rows)}${prof?` | CPL meta R$${prof.cpl} | MQL% meta ${prof.mqlPct}%`:''}${crmCamp.length?` | CRM: ${crmCamp.length} leads, ${mqls} MQLs`:''}`;
+  }).join('\n');
+  const profDesc=(c.mqlProfiles||[]).map(p=>`  [${p.campanha}] CPL R$${p.cpl}, MQL% ${p.mqlPct}%\n${p.fields.map(f=>`    - ${f.name} ${f.crit} "${f.val}"`).join('\n')}`).join('\n');
   const crmSample=crm.slice(0,15).map(l=>{
-    const isM=isMQL(l,c);
+    const prof=getProfile(l,c);const isM=isMQL(l,c);
     const vals=Object.entries(l).slice(0,8).map(([k,v])=>`${k}: ${v}`).join(' | ');
-    return`• [${isM?'MQL':'NÃO MQL'}] ${vals}`;
+    return`• [${isM?'MQL':'NÃO MQL'}][${prof?.campanha||'?'}] ${vals}`;
   }).join('\n');
   return`CLIENTE: ${c.name} | Período: ${periodLabel()}
-METAS: CPL R$${c.cpl||'—'} | MQL% ${c.mqlPct||40}% | Tese: ${c.tese||'—'}
-CRITÉRIOS MQL DESTE CLIENTE:
-${mqlFieldsDesc}
-${c.obs?`Obs: ${c.obs}`:''}
+PERFIS DE MQL:
+${profDesc||'Nenhum perfil configurado.'}
 
-MÉTRICAS DE TRÁFEGO:
-- Investimento: R$${spend.toFixed(2)} | CTR: ${ctr.toFixed(2)}% | CPM: R$${cpm.toFixed(2)} | Freq: ${freq.toFixed(1)}x
-- Leads: ${leads} | CPL real: ${cplReal>0?'R$'+cplReal.toFixed(2):'—'}
+MÉTRICAS: Investimento R$${spend.toFixed(2)} | CTR ${ctr.toFixed(2)}% | CPM R$${cpm.toFixed(2)} | Freq ${freq.toFixed(1)}x | Leads ${leads} | CPL real ${cplReal>0?'R$'+cplReal.toFixed(2):'—'}
 
-CAMPANHAS (${Object.keys(campMap).length} no período):
-${campSum||'Sem dados de campanhas.'}
+CAMPANHAS (${Object.keys(campMap).length}):
+${campSum||'Sem dados.'}
 
-CRM (${crm.length} leads — ${mqls.length} MQLs = ${mqlPct}%):
+CRM (${crm.length} leads):
 ${crmSample||'Sem leads no período.'}`;
 }
 
-// ── AUTO GREET ────────────────────────────────────────────────────────
 async function autoGreet(id){
   const d=sheetData[id];if(!d)return;
   const ads=d.ads.filter(r=>inPeriod(r['Data']));
   const crm=d.crm.filter(r=>inPeriod(r['Data']));
-  const ctx=buildContext(id,ads,crm);
-  const msg=`${ctx}\n\nFaça a análise inicial deste cliente:\n1. Performance de tráfego com [BOM]/[ATENÇÃO]/[MELHORAR]\n2. Avalie cada lead do CRM — é MQL ou não, e por quê, com base nos critérios definidos\n3. MQL% real vs meta\n4. Alertas críticos e próximas ações`;
-  await callClaude(msg,true,id);
+  const ctx=buildCtx(id,ads,crm);
+  await callClaude(`${ctx}\n\nFaça a análise inicial:\n1. Performance de tráfego por campanha com [BOM]/[ATENÇÃO]/[MELHORAR]\n2. Avalie cada lead do CRM — MQL ou não, por quê, e de qual campanha\n3. MQL% real vs meta por campanha\n4. Alertas críticos e próximas ações`,true,id);
 }
 
 function analyzeCamp(clientId,campName){
@@ -735,8 +736,10 @@ function analyzeCamp(clientId,campName){
   const c=clients.find(x=>x.id===clientId);
   const campKey=Object.keys(d.ads[0]||{}).find(k=>/campa/i.test(k))||'Campanha';
   const rows=d.ads.filter(r=>inPeriod(r['Data'])&&r[campKey]===campName);
-  const spend=calcSpend(rows),ctr=calcCTR(rows),cpm=calcCPM(rows),freq=calcFreq(rows),leads=calcLeads(rows);
-  sendMessage(`Analise a campanha "${campName}" do cliente "${c.name}". Período: ${periodLabel()}.\nCTR ${ctr.toFixed(2)}%, CPM R$${cpm.toFixed(2)}, Gasto R$${spend.toFixed(2)}, Freq ${freq.toFixed(1)}x, Leads ${leads}.\nMeta CPL: R$${c.cpl||'—'} | Tese: ${c.tese||'—'}\nEntregue [BOM]/[ATENÇÃO]/[MELHORAR] e plano de ação.`);
+  const crmCamp=d.crm.filter(r=>inPeriod(r['Data'])&&(r['Campanha']||'').toLowerCase().includes(campName.toLowerCase()));
+  const mqls=crmCamp.filter(r=>isMQL(r,c)).length;
+  const prof=c.mqlProfiles?.find(p=>campName.toLowerCase().includes(p.campanha.toLowerCase()));
+  sendMessage(`Analise a campanha "${campName}" do cliente "${c.name}". Período: ${periodLabel()}.\nCTR ${calcCTR(rows).toFixed(2)}%, CPM R$${calcCPM(rows).toFixed(2)}, Gasto R$${calcSpend(rows).toFixed(0)}, Freq ${calcFreq(rows).toFixed(1)}x, Leads ${calcLeads(rows)}.\n${prof?`Meta: CPL R$${prof.cpl}, MQL% ${prof.mqlPct}%`:'Sem meta configurada para esta campanha.'}\nCRM desta campanha: ${crmCamp.length} leads, ${mqls} MQLs.\n${crmCamp.slice(0,10).map(l=>`• [${isMQL(l,c)?'MQL':'NÃO MQL'}] ${Object.entries(l).slice(0,5).map(([k,v])=>`${k}: ${v}`).join(' | ')}`).join('\n')}\n\nEntregue [BOM]/[ATENÇÃO]/[MELHORAR] e plano de ação.`);
 }
 
 function qa(type){
@@ -744,12 +747,12 @@ function qa(type){
   const d=sheetData[activeClientId];if(!d){showToast('Dados carregando.');return;}
   const ads=d.ads.filter(r=>inPeriod(r['Data']));
   const crm=d.crm.filter(r=>inPeriod(r['Data']));
-  const ctx=buildContext(activeClientId,ads,crm);
+  const ctx=buildCtx(activeClientId,ads,crm);
   const prompts={
     geral:`Análise geral completa. ${ctx}`,
     ctr:`Diagnóstico do CTR. O que está abaixo de 2%? Por quê? O que fazer? ${ctx}`,
-    cpl:`CPL real vs meta. Está acima ou abaixo? Quais campanhas puxam o CPL? ${ctx}`,
-    mql:`Qualidade dos leads. Avalie cada lead do CRM — MQL ou não e por quê. ${ctx}`,
+    cpl:`CPL real vs meta por campanha. Está acima ou abaixo? ${ctx}`,
+    mql:`Avalie cada lead do CRM — MQL ou não e por quê, considerando o perfil de cada campanha. ${ctx}`,
     crm:`Análise completa do CRM. Classifique cada lead como MQL ou não com justificativa. ${ctx}`,
     frequencia:`Análise de frequência. Há saturação? O que fazer? ${ctx}`,
     escala:`Quais campanhas escalar agora? O que é necessário? ${ctx}`,
@@ -762,11 +765,7 @@ function openReportModal(type){
   if(!activeClientId){showToast('Selecione um cliente.');return;}
   const yd=yesterday(),lw=lastWeek(),lm=lastMonth();
   const titles={diario:'Relatório Diário',semanal:'Relatório Semanal',mensal:'Relatório Mensal'};
-  const descs={
-    diario:`Qual dia analisar? Padrão: ontem (${fmtBR(yd)}).`,
-    semanal:`Qual semana? Padrão: semana passada (${fmtBR(lw.start)} a ${fmtBR(lw.end)}).`,
-    mensal:`Qual mês? Padrão: mês passado (${fmtBR(lm.start)} a ${fmtBR(lm.end)}).`,
-  };
+  const descs={diario:`Padrão: ontem (${fmtBR(yd)}).`,semanal:`Padrão: semana passada (${fmtBR(lw.start)} a ${fmtBR(lw.end)}).`,mensal:`Padrão: mês passado (${fmtBR(lm.start)} a ${fmtBR(lm.end)}).`};
   document.getElementById('rm-title').textContent=titles[type];
   document.getElementById('rm-desc').textContent=descs[type];
   if(type==='diario'){document.getElementById('rm-start').value=yd;document.getElementById('rm-end-wrap').style.display='none';}
@@ -776,134 +775,80 @@ function openReportModal(type){
 }
 function closeReportModal(){document.getElementById('report-modal').classList.remove('show');}
 
-async function generateReport(type,clientId,since,until){
-  const c=clients.find(x=>x.id===clientId);if(!c)return;
-  const d=sheetData[clientId];
-  if(!d){await loadClientData(clientId);}
-  const dd=sheetData[clientId];if(!dd)return;
-  const sd=parseDate(since),ed=parseDate(until||since);ed?.setHours(23,59,59);
-  const ads=dd.ads.filter(r=>inRange(r['Data'],sd,ed));
-  const crm=dd.crm.filter(r=>inRange(r['Data'],sd,ed));
-  const ctx=buildContext(clientId,ads,crm);
-  const periodStr=since===until?`dia ${fmtBR(since)}`:`${fmtBR(since)} a ${fmtBR(until)}`;
-  const structs={
-    diario:`RELATÓRIO DIÁRIO — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo do dia 2) Status campanhas [BOM]/[ATENÇÃO]/[MELHORAR] 3) Avalie cada lead: MQL? Por quê? 4) Alertas críticos 5) Ações para amanhã`,
-    semanal:`RELATÓRIO SEMANAL — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo da semana 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise de leads e MQL individual 4) O que funcionou 5) Benchmarks CTR 2%, Freq até 3x 6) Plano próxima semana`,
-    mensal:`RELATÓRIO MENSAL — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo executivo 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise leads e MQL 4) CPL real vs meta 5) Eficiência do investimento 6) Estratégia próximo mês`,
-  };
-  if(activeClientId===clientId)sendMessage(structs[type]);
-  else await callClaude(structs[type],true,clientId,true);
-}
-
 function confirmReport(type){
   closeReportModal();
   const since=document.getElementById('rm-start').value;
   const until=type==='diario'?since:document.getElementById('rm-end').value;
-  generateReport(type,activeClientId,since,until);
+  runReport(type,activeClientId,since,until);
+}
+
+async function runReport(type,clientId,since,until){
+  const c=clients.find(x=>x.id===clientId);if(!c)return;
+  if(!sheetData[clientId])await loadClientData(clientId);
+  const d=sheetData[clientId];if(!d)return;
+  const sd=parseDate(since),ed=parseDate(until||since);ed?.setHours(23,59,59);
+  const ads=d.ads.filter(r=>inRange(r['Data'],sd,ed));
+  const crm=d.crm.filter(r=>inRange(r['Data'],sd,ed));
+  const ctx=buildCtx(clientId,ads,crm);
+  const periodStr=since===until?`dia ${fmtBR(since)}`:`${fmtBR(since)} a ${fmtBR(until)}`;
+  const structs={
+    diario:`RELATÓRIO DIÁRIO — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo do dia 2) Status campanhas [BOM]/[ATENÇÃO]/[MELHORAR] 3) Avalie cada lead: MQL? De qual campanha? Por quê? 4) Alertas críticos 5) Ações para amanhã`,
+    semanal:`RELATÓRIO SEMANAL — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo semana 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise MQL por campanha 4) O que funcionou 5) Plano próxima semana`,
+    mensal:`RELATÓRIO MENSAL — ${c.name} — ${periodStr}\n${ctx}\n\nEstrutura: 1) Resumo executivo 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise MQL por campanha 4) CPL real vs meta 5) Estratégia próximo mês`,
+  };
+  if(activeClientId===clientId)sendMessage(structs[type]);
+  else{const reply=await callClaudeRaw(structs[type]);if(reply&&c.cuListId)createClickUpTask(c.cuListId,`[${type.charAt(0).toUpperCase()+type.slice(1)}] ${c.name} — ${periodStr}`,reply);}
 }
 
 // ── CLICKUP ───────────────────────────────────────────────────────────
-async function createClickUpTask(listId,title,description){
-  const key=clickupKey||document.getElementById('clickup-key').value.trim();
-  if(!key||!listId)return null;
+async function createClickUpTask(listId,title,desc){
+  if(!clickupKey||!listId)return null;
   try{
     const res=await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`,{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':key},
-      body:JSON.stringify({name:title,description,status:'to do',priority:2,tags:['relatório','samuelzinho']})
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':clickupKey},
+      body:JSON.stringify({name:title,description:desc,status:'to do',priority:2,tags:['relatório','samuelzinho']})
     });
-    const data=await res.json();
-    return data.id?data:null;
+    const data=await res.json();return data.id?data:null;
   }catch(e){return null;}
 }
 
-// ── AUTO SCHEDULER ────────────────────────────────────────────────────
-const schedState={lastDaily:null,lastWeekly:null,lastMonthly:null};
-let schedInterval=null;
-
+// ── SCHEDULER ────────────────────────────────────────────────────────
 function startScheduler(){
   if(schedInterval)clearInterval(schedInterval);
   document.getElementById('sched-badge').style.display='block';
-  schedInterval=setInterval(checkSchedule,60000); // check every minute
+  schedInterval=setInterval(checkSchedule,60000);
   checkSchedule();
 }
 
 async function checkSchedule(){
   if(!clients.length||!anthropicKey||!sheetsKey)return;
-  const now=new Date();
-  const today=ymd(now);
-  const hour=now.getHours();
-  const dow=now.getDay(); // 0=sun, 1=mon
-  const dom=now.getDate(); // day of month
-
-  // Daily at 8am — report of yesterday
+  const now=new Date(),today=ymd(now),hour=now.getHours(),dow=now.getDay(),dom=now.getDate();
   if(hour===8&&schedState.lastDaily!==today){
     schedState.lastDaily=today;save();
     const yd=yesterday();
-    for(const c of clients){
-      await loadClientData(c.id);
-      const d=sheetData[c.id];if(!d)continue;
-      const sd=parseDate(yd),ed=parseDate(yd);ed?.setHours(23,59,59);
-      const ads=d.ads.filter(r=>inRange(r['Data'],sd,ed));
-      const crm=d.crm.filter(r=>inRange(r['Data'],sd,ed));
-      const ctx=buildContext(c.id,ads,crm);
-      const msg=`RELATÓRIO DIÁRIO — ${c.name} — dia ${fmtBR(yd)}\n${ctx}\n\nEstrutura: 1) Resumo do dia 2) Status campanhas [BOM]/[ATENÇÃO]/[MELHORAR] 3) Avalie leads: MQL? Por quê? 4) Alertas 5) Ações amanhã`;
-      const reply=await callClaudeRaw(msg,c.id);
-      if(reply&&c.cuListId){
-        await createClickUpTask(c.cuListId,`[Diário] ${c.name} — ${fmtBR(yd)}`,reply);
-      }
-    }
-    showToast('Relatórios diários criados no ClickUp.');
+    for(const c of clients)await runReport('diario',c.id,yd,yd);
+    showToast('Relatórios diários enviados ao ClickUp.');
   }
-
-  // Weekly on Monday at 8am
   if(dow===1&&hour===8&&schedState.lastWeekly!==today){
     schedState.lastWeekly=today;save();
     const lw=lastWeek();
-    for(const c of clients){
-      await loadClientData(c.id);
-      const d=sheetData[c.id];if(!d)continue;
-      const sd=parseDate(lw.start),ed=parseDate(lw.end);ed?.setHours(23,59,59);
-      const ads=d.ads.filter(r=>inRange(r['Data'],sd,ed));
-      const crm=d.crm.filter(r=>inRange(r['Data'],sd,ed));
-      const ctx=buildContext(c.id,ads,crm);
-      const msg=`RELATÓRIO SEMANAL — ${c.name} — ${fmtBR(lw.start)} a ${fmtBR(lw.end)}\n${ctx}\n\nEstrutura: 1) Resumo semana 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise MQL individual 4) O que funcionou 5) Plano próxima semana`;
-      const reply=await callClaudeRaw(msg,c.id);
-      if(reply&&c.cuListId){
-        await createClickUpTask(c.cuListId,`[Semanal] ${c.name} — ${fmtBR(lw.start)} a ${fmtBR(lw.end)}`,reply);
-      }
-    }
-    showToast('Relatórios semanais criados no ClickUp.');
+    for(const c of clients)await runReport('semanal',c.id,lw.start,lw.end);
+    showToast('Relatórios semanais enviados ao ClickUp.');
   }
-
-  // Monthly on 1st at 8am
   if(dom===1&&hour===8&&schedState.lastMonthly!==today){
     schedState.lastMonthly=today;save();
     const lm=lastMonth();
-    for(const c of clients){
-      await loadClientData(c.id);
-      const d=sheetData[c.id];if(!d)continue;
-      const sd=parseDate(lm.start),ed=parseDate(lm.end);ed?.setHours(23,59,59);
-      const ads=d.ads.filter(r=>inRange(r['Data'],sd,ed));
-      const crm=d.crm.filter(r=>inRange(r['Data'],sd,ed));
-      const ctx=buildContext(c.id,ads,crm);
-      const msg=`RELATÓRIO MENSAL — ${c.name} — ${fmtBR(lm.start)} a ${fmtBR(lm.end)}\n${ctx}\n\nEstrutura: 1) Resumo executivo 2) Performance por campanha [BOM]/[ATENÇÃO]/[MELHORAR] 3) Análise MQL 4) CPL real vs meta 5) Estratégia próximo mês`;
-      const reply=await callClaudeRaw(msg,c.id);
-      if(reply&&c.cuListId){
-        await createClickUpTask(c.cuListId,`[Mensal] ${c.name} — ${fmtBR(lm.start)} a ${fmtBR(lm.end)}`,reply);
-      }
-    }
-    showToast('Relatórios mensais criados no ClickUp.');
+    for(const c of clients)await runReport('mensal',c.id,lm.start,lm.end);
+    showToast('Relatórios mensais enviados ao ClickUp.');
   }
 }
 
-// ── CHAT ──────────────────────────────────────────────────────────────
-function addMsg(role,html,persist=true){
+// ── CLAUDE ───────────────────────────────────────────────────────────
+function addMsg(role,html){
   const el=document.createElement('div');el.className=`msg ${role}`;
   el.innerHTML=`<div class="mav">${role==='ai'?'SM':'VC'}</div><div class="bubble">${html}</div>`;
   document.getElementById('messages').appendChild(el);
   document.getElementById('messages').scrollTop=99999;
-  return el;
 }
 function showTyping(){
   const el=document.createElement('div');el.className='msg ai';el.id='typing';
@@ -914,7 +859,7 @@ function removeTyping(){const t=document.getElementById('typing');if(t)t.remove(
 
 function fmt(t){
   t=t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
-  t=t.replace(/^###\s+(.+)$/gm,'<h3>$1</h3>');t=t.replace(/^##\s+(.+)$/gm,'<h3>$1</h3>');
+  t=t.replace(/^###?\s+(.+)$/gm,'<h3>$1</h3>');
   t=t.replace(/^\*\s+(.+)$/gm,'<li>$1</li>');t=t.replace(/^-\s+(.+)$/gm,'<li>$1</li>');
   t=t.replace(/(<li>.*?<\/li>(\s|<br>)*)+/gs,m=>`<ul>${m}</ul>`);
   t=t.replace(/^---+$/gm,'<hr>');
@@ -924,83 +869,58 @@ function fmt(t){
   t=t.replace(/\n/g,'<br>');return t;
 }
 
-async function sendMessage(overrideText){
+async function sendMessage(override){
   const input=document.getElementById('input');
-  const text=overrideText||input.value.trim();if(!text)return;
-  if(!overrideText){input.value='';input.style.height='auto';}
+  const text=override||input.value.trim();if(!text)return;
+  if(!override){input.value='';input.style.height='auto';}
   document.getElementById('send-btn').disabled=true;
   const empty=document.getElementById('empty-state');if(empty)empty.remove();
   if(activeClientId)hist(activeClientId).push({role:'user',content:text});
-  if(!overrideText)addMsg('user',escH(text).replace(/\n/g,'<br>'));
+  if(!override)addMsg('user',escH(text).replace(/\n/g,'<br>'));
   showTyping();
   await callClaude(text,false,activeClientId);
 }
 
-const SYSTEM=`Você é o Samuelzinho Meta, especialista em tráfego pago e marketing tributário para advogados tributaristas e contadores. Você recebe dados reais das planilhas dos clientes e faz análises concretas baseadas nesses dados.
+const SYSTEM=`Você é o Samuelzinho Meta, especialista em tráfego pago e marketing tributário. Analisa dados reais de campanhas Meta Ads para advogados tributaristas e contadores.
 
-CONHECIMENTO:
-- Metodologia Subido: Gancho + Corpo + CTA | mín. 6 anúncios | pausou um, sobe outro
-- Ganchos: pergunta, história, contraintuitivo, segmentado, personificado, direto, dualidade, prova
-- Andromeda: lance + taxa de ação estimada + qualidade
-- Schwartz: inconsciente → problema → solução → produto → marca
-- RETINA: Relacionamento, Engajamento, Transformação, Interação, Níveis de consciência, Autoridade
-- Benchmarks: CTR mín. 2%, MQL mín. 40%, Freq. até 3x
-- Campanhas validadas: Negociação de Dívidas, Equiparação Hospitalar, Reforma Tributária, INSS Acima do Teto
+METODOLOGIA: Subido (Gancho+Corpo+CTA, mín. 6 anúncios), Andromeda, Schwartz (5 níveis de consciência), RETINA.
+BENCHMARKS: CTR mín. 2%, MQL mín. 40%, Frequência até 3x.
+CAMPANHAS VALIDADAS: Negociação de Dívidas, Equiparação Hospitalar, Reforma Tributária, INSS Acima do Teto.
 
-ANÁLISE DE MQL:
-- Você recebe os critérios de MQL específicos de cada cliente
-- Avalie cada lead individualmente com base nesses critérios
-- Diga claramente: é MQL ou não, e por quê
-- Nunca invente dados — analise somente o que foi fornecido
+MQL: Você recebe os critérios específicos de cada campanha. Avalie cada lead individualmente com base nesses critérios. Indique a campanha de origem do lead quando possível.
 
-FORMATO: use [BOM]/[ATENÇÃO]/[MELHORAR] + diagnóstico + plano de ação priorizado
-RESTRIÇÕES: pt-BR, ponto final no lugar de exclamação, sem emojis, direto e simples.`;
+FORMATO: [BOM]/[ATENÇÃO]/[MELHORAR] + diagnóstico + plano de ação priorizado.
+RESTRIÇÕES: pt-BR, sem emojis, direto e simples.`;
 
-async function callClaude(userMsg,isSystem=false,clientId='',silent=false){
+async function callClaude(userMsg,isSystem=false,clientId=''){
   const h=clientId?hist(clientId).slice(-16):[];
   const msgs=isSystem?[{role:'user',content:userMsg}]:[...h,{role:'user',content:userMsg}];
   const key=document.getElementById('anthropic-key').value.trim()||anthropicKey;
   const headers={'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'};
   if(key)headers['x-api-key']=key;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',headers,
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,system:SYSTEM,messages:msgs})
-    });
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,system:SYSTEM,messages:msgs})});
     const data=await res.json();
     const reply=data.content?.map(b=>b.text||'').join('')||'Sem resposta.';
-    removeTyping();
-    if(!silent)addMsg('ai',fmt(reply));
+    removeTyping();addMsg('ai',fmt(reply));
     if(clientId){
       hist(clientId).push({role:'assistant',content:reply});save();
-      // Auto ClickUp on report
       if(isSystem&&userMsg.includes('RELATÓRIO')){
         const c=clients.find(x=>x.id===clientId);
         const rtype=userMsg.includes('DIÁRIO')?'Diário':userMsg.includes('SEMANAL')?'Semanal':'Mensal';
-        const today=new Date().toLocaleDateString('pt-BR');
-        if(c?.cuListId){
-          const clean=reply.replace(/\*\*(.*?)\*\*/g,'$1').replace(/<[^>]+>/g,'').trim();
-          createClickUpTask(c.cuListId,`[${rtype}] ${c.name} — ${today}`,clean).then(task=>{
-            if(task&&!silent)addMsg('ai',fmt(`Tarefa criada no ClickUp. [Ver tarefa](${task.url})`));
-          });
-        }
+        const clean=reply.replace(/\*\*(.*?)\*\*/g,'$1').replace(/<[^>]+>/g,'').trim();
+        if(c?.cuListId)createClickUpTask(c.cuListId,`[${rtype}] ${c.name} — ${new Date().toLocaleDateString('pt-BR')}`,clean).then(t=>{if(t)addMsg('ai',fmt(`Tarefa criada no ClickUp. [Ver tarefa](${t.url})`));});
       }
     }
-    return reply;
-  }catch(e){removeTyping();if(!silent)addMsg('ai','Erro ao conectar com a IA. Tente novamente.');return null;}
+  }catch(e){removeTyping();addMsg('ai','Erro ao conectar com a IA.');}
   finally{document.getElementById('send-btn').disabled=false;}
 }
 
-async function callClaudeRaw(userMsg,clientId){
-  const key=anthropicKey;if(!key)return null;
-  const headers={'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true','x-api-key':key};
+async function callClaudeRaw(userMsg){
+  if(!anthropicKey)return null;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',headers,
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,system:SYSTEM,messages:[{role:'user',content:userMsg}]})
-    });
-    const data=await res.json();
-    return data.content?.map(b=>b.text||'').join('')||null;
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true','x-api-key':anthropicKey},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,system:SYSTEM,messages:[{role:'user',content:userMsg}]})});
+    const data=await res.json();return data.content?.map(b=>b.text||'').join('')||null;
   }catch(e){return null;}
 }
 
@@ -1013,14 +933,12 @@ document.getElementById('input').addEventListener('keydown',function(e){if(e.key
 window.addEventListener('load',async()=>{
   const ok=load();
   if(ok){
-    saveConfig();
-    renderClients();
+    saveConfig();renderClients();
     document.getElementById('reload-btn').style.display='block';
     document.getElementById('add-client-btn').style.display='block';
     addMsg('ai',fmt(`Bem-vindo de volta. **${clients.length} cliente(s)** carregado(s). Carregando dados...`));
     for(const c of clients)await loadClientData(c.id);
-    renderClients();
-    startScheduler();
+    renderClients();startScheduler();
   }
 });
 </script>
